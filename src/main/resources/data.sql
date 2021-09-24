@@ -1,0 +1,8 @@
+INSERT INTO INDICE (INDICE1, EXCHNG_CODE) VALUES
+  ('NIFTY50', 'IN');
+
+
+INSERT INTO Stock (ISIN_CODE, SYMBOL, COMPANY_NAME) VALUES
+  ('INE742F01042', 'ADANIPORTS', 'Adani Ports and Special Economic Zone Ltd.');
+  commit;
+

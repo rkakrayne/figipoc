@@ -1,0 +1,43 @@
+server:
+  port: 8099
+spring:
+  sql:
+    init:
+      mode: always
+  main:
+    banner-mode: "off"
+  application:
+    name: figi
+  h2:
+    datasource:
+      url: jdbc:h2:mem:testdb
+      driverClassName: org.h2.Driver
+      username: sa
+      password:
+      initialization-mode: always
+    console:
+      enabled: true
+      path: /h2
+      settings:
+        web-allow-others: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+getMappings:
+  request-uri: https://api.openfigi.com/v3/mapping
+search:
+  request-uri: https://api.openfigi.com/v3/search
+exchcode:
+  request-uri: https://api.openfigi.com/v3/mapping/values/exchCode
+figi:
+  api:
+    key: #ADD your Key
+retry:
+    limit: 2
+    sleepTime: 5000
+logging:
+  level:
+    root: INFO
